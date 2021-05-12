@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap" rel="stylesheet">
+    <title>Meu Financeiro</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="logo">Meu Financeiro</h1>
+    </header>
+
+    <main class="container">
+        <section id="balanco">
+            
+            <div class="card">
+                <h3>
+                    <span>Entradas</span>
+                    <img src="./assets/income.svg" alt="Entradas" />
+                </h3>
+                <p id="entradas">R$ 5.000,00</p>
+            </div>
+            
+            <div class="card">
+                <h3>
+                    <spam>Saídas</spam>
+                    <img src="./assets/expense.svg" alt="Saídas" />
+                </h3>
+                <p id="saidas">R$ 2.000,00</p>                
+            </div>
+
+            <div class="card green">
+                <h3>
+                    <span>Total</span>
+                    <img src="./assets/total.svg" alt="Total" />
+                </h3>
+                <p id="total">0,00</p>                
+            </div>
+
+        </section>
+
+        <section id="transacoes">
+            <a href="#" onclick="Modal.open()" class="botao new">+ Nova Transação</a>
+
+        <table id="tabela-dados">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                
+            </tbody>
+        </table> 
+        </section>
+        
+    </main>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>Nova Transação</h2>
+                <form action="" onsubmit="Form.submit(event)" >
+                    <div class="input-group">
+                        <label for="description"></label>
+                        <input type="text" id="description" placeholder="Descrição" name="description">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="amount"></label>
+                        <input type="number" id="amount" step="0.01" placeholder="0,00" name="amount">
+                        <small class="help">Use o sinal - (negativo) para despesas e , (virgula) para casas decimais.</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="date"></label>
+                        <input type="date" id="date" name="date">
+                    </div>
+
+                    <div class="input-group actions">
+                        <a href="#" class="btn btn-cancel" onclick="Modal.close()">Cancelar</a>
+                        <button type="submit" class="btn btn-save">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+     
+
+    <footer id="rodape">
+        <p>Meu Financeiro &copy; 2021 </p>
+    </footer>
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
