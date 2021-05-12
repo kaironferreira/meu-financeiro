@@ -5,6 +5,6 @@ Projeto responivo
 
 ## Imagens do resultado final
 
-!.[.].(/screenshot/1.PNG)
-!.[.].(/screenshot/2.PNG)
-!.[.].(/screenshot/3.PNG)
+![](/screenshot/1.PNG)
+![](/screenshot/2.PNG)
+![](/screenshot/3.PNG)
